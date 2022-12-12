@@ -1,0 +1,303 @@
+winning_number = 43
+guess=1
+number= int(input("guess a number between 1 and 100: "))
+game_over = False
+
+while not game_over:
+    if number == winning_number:
+        print(f"you win, and you guessed this number in {guess} times" )
+        game_over= True
+    else:
+        if number< winning_number:
+            print("too low")
+        else:
+            print("too high")
+        guess+=1
+        number= int(input("guess again : "))
+            
+
+
+
+
+
+CHAPTER 4 EXERCISE1
+
+
+
+class Phone:
+    def __init__(self,brand,model_name,price):
+        self.brand = brand
+        self.model_name = model_name
+        self.price =max(price,0)
+    
+    def full_name(self):
+        return f"{self.brand} {self.model_name}" 
+    
+    def make_a_call(self,number):
+        return f"calling {number}...."
+class Smartphone(Phone):
+    def __init__(self,brand,model_name, price, ram, internal_memory,rear_camera):
+       # Phone.__init__(self,brand,model_name, price)
+        super().__init__(brand,model_name, price)
+        self.ram = ram
+        self.internal_memory = internal_memory
+        self.rear_camera =rear_camera
+        
+phone = Phone('nokia','1100',1000)
+smartphone = Smartphone('oneplus','5',30000,'6 GB','64 GB','20 MP')
+print(phone.full_name())
+print(smartphone.full_name() + f" and price is {smartphone._price}")
+
+
+
+
+
+
+
+LECTURE 77: EXERCISE 1 SOLUTION
+
+
+
+def greater(a,b):
+    if a>b:
+        return a
+    else:
+        return b
+num1 = int(input("enter first number "))
+num2 = int(input("enter second number "))
+bigger = greater(num1,num2)
+
+print(f"{bigger} is greater")
+
+
+
+
+
+LECTURE 81: EXERCISE 2 SOLUTION
+
+
+
+def is_palindrome(word):
+    reversed_word = word[::-1]
+    if word == reversed_word:
+        return True
+    else:
+        return False
+        
+    
+print(is_palindrome("naman"))
+print(is_palindrome("horse"))
+
+
+
+
+
+
+
+LECTURE99: EXERCISE 1 SOLUTION
+
+
+def square_list(l):
+    square = []
+    for i in l:
+        square.append(i**2)
+    return square
+numbers = list(range(1,11))
+print(square_list(numbers))
+        
+
+
+
+
+LECTURE 101: EXERCISE2 SOLUTION
+
+
+
+def reverse_list(l):
+    r_list = []
+    for i in range(1,len(l)+1):
+        popped_item = l.pop()
+        r_list.append(popped_item)
+    return r_list
+    
+    
+numbers= [1,2,3,4,] 
+print(reverse_list(numbers))
+
+
+
+
+
+
+
+LECTURE 103: EXERCISE3 SOLUTION
+
+
+
+def reverse_elements(l):
+    elements = []
+    for i in l:
+        elements.append(i[::-1])
+    return elements
+words = ['abc','tuv','xyz']
+print(reverse_elements(words))
+
+
+
+
+
+
+
+LECTURE105: EXERCISE4 SOLUTION
+
+
+
+def filter_odd_even(l):
+    odd_nums = []
+    even_nums = []
+    for i in l:
+        if i %2 == 0:
+            even_nums.append(i)
+        else:
+            odd_nums.append(i)
+    output = [odd_nums, even_nums]
+    return output
+nums = [1,2,3,4,5,6,7]
+print(filter_odd_even(nums))  
+
+
+
+
+
+
+LECTURE107:EXERCISE 5 SOLUTION
+
+
+
+def common_finder(l1,l2):
+    output = []
+    for i in l1:
+        if i in l2:
+            output.append(i)
+    return output
+    
+print(common_finder([1,2,5,8], [1,2,7,6])) 
+
+
+
+
+
+
+
+LECTURE110: EXERCISE6
+
+
+
+def sublist_counter(l):
+    count = 0
+    for i in l:
+        if type(i) == list:
+            count+= 1
+    return count
+mixed = [1,2,3, [1,2]]
+print(sublist_counter(mixed))
+
+
+
+
+
+
+
+LECTURE 122:
+
+
+
+user = {'name': 'anjali', 'age': '19','age':'24'}
+print(user.get('fav','notfound!'))
+
+
+
+
+
+LECTURE 112:
+
+
+example = {'one','two','three'}
+print(example[:2])
+
+
+
+
+
+LECTURE 63:
+
+
+
+
+
+n= int(input("enter the number: "))
+total = 0
+for i in range(1,n+1):
+    total+= i
+print(total)    
+
+
+
+LECTURE113:
+
+
+g =('maneli jamal','eddie vander meer', 'andrew foy')
+g1+g2+g3 = (g)
+print(g1)
+
+
+
+
+
+LECTURE 108:
+
+
+
+numbers = [6,60,2]
+print(min(numbers))
+
+
+
+
+
+LECTURE 81:
+
+
+
+
+
+
+def fibonacci_seq(n):
+    a=0
+    b=1
+    if n== 1:
+        print(a)
+    elif n==2:
+        print(a, b)
+    else:
+        print(a,b end = " ")
+        for i in range(n-2):
+            c= a+b
+            a= b
+            b = c
+            print(b,end =" ")
+fibonacci_seq(20)            
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    
